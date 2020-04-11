@@ -30,9 +30,10 @@ public class Bullet : MonoBehaviour
 			enemy.TakeDamage(damage);
 		}*/
 
-		//Instantiate(impactEffect, transform.position, transform.rotation);
-
-		//Destroy(gameObject);
-	}
+		GameObject aux = Instantiate(impactEffect, transform.position, transform.rotation);
+        
+		Destroy(gameObject);
+        Destroy(aux, 1);
+    }
 	
 }
