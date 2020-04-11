@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
         rb2d.MovePosition(rb2d.position + movement * speed * Time.fixedDeltaTime);
     }
 
-    /*private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("PickUp"))
         {
@@ -51,6 +51,6 @@ public class PlayerController : MonoBehaviour
 
     private void SetTotalGold()
     {
-        totalGoldText.text = "Gold: " + totalGold.ToString();
-    }*/
+        //totalGoldText.text = "Gold: " + totalGold.ToString();
+    }
 }
