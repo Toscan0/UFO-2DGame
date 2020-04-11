@@ -242,6 +242,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6405366525864602835}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1637399506 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 578797117130966865, guid: bb0f125838025c74b8daf9bc5a843811,
+    type: 3}
+  m_PrefabInstance: {fileID: 8485206230086897634}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ea6fda41c36e0343bf62ea643f98ca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1704196848
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,6 +658,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 259061048041637473, guid: ecf9ef9e32f497d40b244d5a423945e5,
+        type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1637399506}
+    - target: {fileID: 2400486370717920234, guid: ecf9ef9e32f497d40b244d5a423945e5,
+        type: 3}
+      propertyPath: totalGoldText
+      value: 
+      objectReference: {fileID: 226177072}
     - target: {fileID: 7695907834322217560, guid: ecf9ef9e32f497d40b244d5a423945e5,
         type: 3}
       propertyPath: m_LocalPosition.x
