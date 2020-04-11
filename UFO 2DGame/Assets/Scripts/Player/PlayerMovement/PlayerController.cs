@@ -28,8 +28,7 @@ public class PlayerController : MonoBehaviour
         movement.x = Input.GetAxis("Horizontal");
         movement.y = Input.GetAxis("Vertical");
 
-        //rotate the UFO
-        transform.Rotate(new Vector3(0, 0, 25) * Time.deltaTime);
+       
     }
 
     // Especiallized to physics
