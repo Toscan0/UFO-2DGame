@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private float speed = 2;
 
     private Rigidbody2D rb2d;
-    private int totalGold = 0;
+    private static int totalGold = 0;
 
     Vector2 movement;
 
@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
 
-        //SetTotalGold();
+        SetTotalGold();
     }
 
     private void Update()
@@ -51,6 +51,6 @@ public class PlayerController : MonoBehaviour
 
     private void SetTotalGold()
     {
-        //totalGoldText.text = "Gold: " + totalGold.ToString();
+        totalGoldText.text = "Gold: " + totalGold.ToString();
     }
 }
