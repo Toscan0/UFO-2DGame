@@ -14,22 +14,31 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb2d;
     private int totalGold = 0;
 
+    Vector2 movement;
+
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        SetTotalGold();
+
+        //SetTotalGold();
     }
 
+    private void Update()
+    {
+        movement.x = Input.GetAxis("Horizontal");
+        movement.y = Input.GetAxis("Vertical");
+
+        //rotate the UFO
+        transform.Rotate(new Vector3(0, 0, 25) * Time.deltaTime);
+    }
+
+    // Especiallized to physics
     private void FixedUpdate()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-
-        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
-        rb2d.AddForce(movement * speed);
+        rb2d.MovePosition(rb2d.position + movement * speed * Time.fixedDeltaTime);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    /*private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("PickUp"))
         {
@@ -43,5 +52,5 @@ public class PlayerController : MonoBehaviour
     private void SetTotalGold()
     {
         totalGoldText.text = "Gold: " + totalGold.ToString();
-    }
+    }*/
 }
