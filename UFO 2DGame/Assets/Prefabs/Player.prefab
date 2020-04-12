@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6277841572663569625}
   - component: {fileID: 6985060813266118218}
   - component: {fileID: 8089773480853883794}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ship
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1380294997230150771}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FirePoint
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 2400486370717920234}
   - component: {fileID: 3463839184699381649}
   - component: {fileID: 5781633733214883525}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -290,7 +290,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4544181592154897318}
   - component: {fileID: 6453783602661285214}
-  m_Layer: 0
+  - component: {fileID: 6881407642691481615}
+  m_Layer: 10
   m_Name: Gun_Barrel
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -361,3 +362,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &6881407642691481615
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8402253820928013956}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.042088404, y: -0.03808012}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.75, y: 0.73}
+    newSize: {x: 0.75, y: 0.73}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.24092907, y: 0.09265913}
+  m_EdgeRadius: 0
