@@ -26,6 +26,7 @@ public class Archer : Enemy
     [SerializeField]
     private int moveWaitingTime = 5;
     private Vector2 movement;
+    private bool move = true;
 
     private void Start()
     {
@@ -46,13 +47,17 @@ public class Archer : Enemy
         moveTimer += Time.deltaTime;
         if (moveTimer > moveWaitingTime)
         {
-            //Move();
-            moveTimer = 0;
+            Move();
+            move = false;
         }
+        if(moveTimer > moveWaitingTime + 1)
+        {
+            movement.x = 0;
+            movement.y = 0;
 
-
-        movement.x = Input.GetAxis("Horizontal");
-        movement.y = Input.GetAxis("Vertical");
+            moveTimer = 0;
+            move = true;
+        }
 
         //since there are no lefts walk sprites
         if (movement.x < 0)
@@ -82,7 +87,11 @@ public class Archer : Enemy
 
     private void Move()
     {
-        movement.x = Input.GetAxis("Horizontal");
-        movement.y = Input.GetAxis("Vertical");
+        if(move == true)
+        {
+            movement.x = Random.Range(-1f, 1f);
+            movement.y = Random.Range(-1f, 1f);
+            Debug.Log(movement.x + " " + movement.y);
+        }
     }
 }
