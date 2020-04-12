@@ -18,6 +18,10 @@ Unity 2019.3.9f1
 * Tiles / Sprites
 * Load Scene Transition
 * Working with prefabs in mutiple scenes
+* Interfaces
+	* ITakeDamage
+* Enemys
+	* derives from Enemy abstract class
 
 ### Acknowledge:
 
