@@ -29,7 +29,8 @@ public class PlayerMovement: PlayerManager
     // Especiallized to physics
     private void FixedUpdate()
     {
-        rb2d.MovePosition(rb2d.position + movement * moveSpeed * Time.fixedDeltaTime);
+        //normalize moevement vector to avoid faster walk in diagonal movement
+        rb2d.MovePosition(rb2d.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
 
         Vector2 lookDir = mousePos - rb2d.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
