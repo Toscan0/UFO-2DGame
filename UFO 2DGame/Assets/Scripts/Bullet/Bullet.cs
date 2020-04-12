@@ -27,8 +27,6 @@ public class Bullet : MonoBehaviour
         ITakeDamage damagable = hitInfo.GetComponent<ITakeDamage>();
 		if (damagable != null)
 		{
-            //Debug.Log(hitInfo.name);
-
             damagable.TakeDamage(damage);
 		}
 

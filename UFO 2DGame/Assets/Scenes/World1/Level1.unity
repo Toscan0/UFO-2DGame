@@ -978,6 +978,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4536463238567732701, guid: 6b92bb0d0df9b7043aa6147992b94050,
+        type: 3}
+      propertyPath: maxHealth
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 9209069497416242328, guid: 6b92bb0d0df9b7043aa6147992b94050,
         type: 3}
       propertyPath: m_Name

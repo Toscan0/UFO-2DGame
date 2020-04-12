@@ -59,7 +59,6 @@ public abstract class Enemy : MonoBehaviour, ITakeDamage
         if (throwsHeart)
         {
             Instantiate(heartPrefab, transform.position, Quaternion.identity);
-            Debug.Log("sssssssss");
         }
     }
 }
