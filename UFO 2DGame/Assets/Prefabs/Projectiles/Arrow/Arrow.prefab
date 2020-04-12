@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 3731420782121223604}
   - component: {fileID: 9056722160382562460}
   - component: {fileID: 713688364337284708}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arrow
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +94,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -167,5 +167,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   impactEffectPrefab: {fileID: 1473625048454486, guid: cbedb4fe04aa44a468bd7bd011d11973,
     type: 3}
-  speed: 20
+  speed: 10
   damage: 5
