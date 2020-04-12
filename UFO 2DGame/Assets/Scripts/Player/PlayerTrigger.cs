@@ -4,14 +4,12 @@ using UnityEngine.UI;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerManager))]
-public class PlayerTrigger : MonoBehaviour
+public class PlayerTrigger : PlayerManager
 {
     public Text totalGoldText;
-    private int totalGold;
 
     private void Start()
     {
-        totalGold = GetComponent<PlayerManager>().TotalGold;
         SetTotalGold();
     }
 

@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerManager))]
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth : PlayerManager
 {
     public HealthBar healthBar;
     
-    private float maxHealth;
-    private float currentHealth;
-
     private void Start()
     {
-        maxHealth = GetComponent<PlayerManager>().MaxHealth;
-
+        //Player starts with maxHealth
+        /*
+         *  TODO: not sure if correct, when a player changes level
+         */
         currentHealth = maxHealth;
+
         healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetHealth(currentHealth);
     }
 
     private void Update()

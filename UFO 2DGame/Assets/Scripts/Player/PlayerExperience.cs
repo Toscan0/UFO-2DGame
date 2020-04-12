@@ -3,21 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerManager))]
-public class PlayerExperience : MonoBehaviour
+public class PlayerExperience : PlayerManager
 {
     public ExperienceBar experienceBar;
 
-    private float maxXP;
-    private float currentXP;
-    
     private void Start()
     {
-        maxXP = GetComponent<PlayerManager>().MaxExperience;
         experienceBar.SetMaxExperience(maxXP);
 
-        currentXP = GetComponent<PlayerManager>().CurrentExperience;
         experienceBar.SetExperience(currentXP);
-
     }
 
     private void Update()

@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    [SerializeField]
-    private float moveSpeed = 2;
+    protected static float moveSpeed = 2;
 
-    private static int totalGold = 0;
+    protected static int totalGold = 0;
 
-    private static float maxHealth = 100;
-    private static float currentHealth;
-    
-    private static float maxExperience = 500;
-    private static float currentExperience;
+    protected static float maxHealth = 100;
+    protected static float currentHealth;
+
+    protected static float maxXP = 500;
+    protected static float currentXP = 0;
+
 
     #region GETS&SETS
 
@@ -41,16 +41,16 @@ public class PlayerManager : MonoBehaviour
         set { currentHealth = value; }
     }
 
-    public float MaxExperience
+    public float MaxXP
     {
-        get { return maxExperience; }
-        set { maxExperience = value; }
+        get { return maxXP; }
+        set { maxXP = value; }
     }
 
-    public float CurrentExperience
+    public float CurrentXP
     {
-        get { return currentExperience; }
-        set { currentExperience = value; }
+        get { return currentXP; }
+        set { currentXP = value; }
     }
 
     #endregion
