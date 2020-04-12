@@ -8,14 +8,24 @@ public class Archer : Enemy
     public Transform firePoint;
     public GameObject arrowPrefab;
 
-    [SerializeField]
-    private float moveSpeed = 5;
 
-    private Vector2 movement;
 
     private Rigidbody2D rb2d;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
+
+    //Shoot
+    private float shootTimer;
+    [SerializeField]
+    private int shootWaitingTime = 3;
+
+    //Movement
+    [SerializeField]
+    private float moveSpeed = 5;
+    private float moveTimer;
+    [SerializeField]
+    private int moveWaitingTime = 5;
+    private Vector2 movement;
 
     private void Start()
     {
@@ -24,14 +34,28 @@ public class Archer : Enemy
         animator = GetComponent<Animator>();
     }
 
-
     private void Update()
     {
+        shootTimer += Time.deltaTime;
+        if (shootTimer > shootWaitingTime)
+        {
+            Shoot();
+            shootTimer = 0;
+        }
+
+        moveTimer += Time.deltaTime;
+        if (moveTimer > moveWaitingTime)
+        {
+            //Move();
+            moveTimer = 0;
+        }
+
+
         movement.x = Input.GetAxis("Horizontal");
         movement.y = Input.GetAxis("Vertical");
 
         //since there are no lefts walk sprites
-        if(movement.x < 0)
+        if (movement.x < 0)
         {
             spriteRenderer.flipX = true;
         }
@@ -43,9 +67,6 @@ public class Archer : Enemy
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
-
-        //Shoot once every frame because fuck yeah!!
-        //Shoot();
     }
 
     private void FixedUpdate()
@@ -57,5 +78,11 @@ public class Archer : Enemy
     private void Shoot()
     {
         Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
+    }
+
+    private void Move()
+    {
+        movement.x = Input.GetAxis("Horizontal");
+        movement.y = Input.GetAxis("Vertical");
     }
 }
