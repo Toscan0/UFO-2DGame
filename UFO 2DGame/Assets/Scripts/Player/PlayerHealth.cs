@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerManager))]
-public class PlayerHealth : PlayerManager
+public class PlayerHealth : PlayerManager, ITakeDamage
 {
     public HealthBar healthBar;
     
