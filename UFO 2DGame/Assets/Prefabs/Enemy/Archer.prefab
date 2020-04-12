@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1413761584117582658}
   - component: {fileID: 732105721}
   - component: {fileID: 3167369538851001712}
+  - component: {fileID: 4951980134424094711}
   m_Layer: 0
   m_Name: Archer
   m_TagString: Untagged
@@ -29,8 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.0881139, y: 2.28, z: -0.13698389}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1413761585290353510}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -93,44 +93,14 @@ MonoBehaviour:
     type: 3}
   deathEffectPrefab: {fileID: 7832607788438700697, guid: 1237169c9bace6f4e8fdb4ceb9ce648d,
     type: 3}
---- !u!1 &1413761585290353511
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1413761585290353510}
-  - component: {fileID: 1413761585290353508}
-  m_Layer: 0
-  m_Name: Body
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1413761585290353510
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1413761585290353511}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1413761584117582657}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1413761585290353508
+  moveSpeed: 5
+--- !u!212 &4951980134424094711
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1413761585290353511}
+  m_GameObject: {fileID: 1413761584117582659}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
