@@ -199,6 +199,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!20 &371139103 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 5426886150319774693, guid: 140508cc514144e4ab362949adddc9bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 5426886150494725018}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &953726989 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5458913885191579187, guid: 0b72f3a73f9da5e4c9b249ad3cbd31ac,
@@ -755,6 +761,16 @@ PrefabInstance:
       propertyPath: totalGoldText
       value: 
       objectReference: {fileID: 226177072}
+    - target: {fileID: 7695907834322217566, guid: ecf9ef9e32f497d40b244d5a423945e5,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 371139103}
+    - target: {fileID: 7695907834322217566, guid: ecf9ef9e32f497d40b244d5a423945e5,
+        type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 371139103}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecf9ef9e32f497d40b244d5a423945e5, type: 3}
 --- !u!1001 &8485206230086897634

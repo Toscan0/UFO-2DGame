@@ -12,9 +12,9 @@ Unity 2019.3.9f1
 
 ### This project includes
 * Health / Experience Bar
-* Player (with C# classes)
+* Player (classes extended from player manager)
 	* Player movement
-	* Player shoot with mouse
+	* Player shoot with mouse (Prefab shooting)
 * Tiles / Sprites
 * Load Scene Transition
 * Working with prefabs in mutiple scenes
