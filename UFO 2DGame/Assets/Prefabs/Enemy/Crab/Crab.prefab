@@ -167,3 +167,5 @@ MonoBehaviour:
   throwsHeart: 1
   heartPrefab: {fileID: 3117338023737482925, guid: a8fe0a7fef0876c4a9f48e4ab73352b0,
     type: 3}
+  deathEffectPrefab: {fileID: 7832607788438700697, guid: 1237169c9bace6f4e8fdb4ceb9ce648d,
+    type: 3}

@@ -28,7 +28,8 @@ public abstract class Enemy : MonoBehaviour, ITakeDamage
     private bool throwsHeart;
 
     public GameObject heartPrefab;
-    
+    public GameObject deathEffectPrefab;
+
     private void Awake()
     {
         currentHealth = maxHealth;
@@ -48,9 +49,11 @@ public abstract class Enemy : MonoBehaviour, ITakeDamage
 
             ThrowHeart();
             //ThrowGold();
-            //make destroy animation
+
+            GameObject deathEffect = Instantiate(deathEffectPrefab, transform.position, transform.rotation);
 
             Destroy(gameObject);
+            Destroy(deathEffect, 1);
         }
     }
 

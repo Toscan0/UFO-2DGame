@@ -5,8 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Bullet : MonoBehaviour
 {
-    // Prefab
-    public GameObject impactEffect;
+    public GameObject impactEffectPrefab;
 
     [SerializeField]
 	private float speed = 20f;
@@ -30,7 +29,7 @@ public class Bullet : MonoBehaviour
             damagable.TakeDamage(damage);
 		}
 
-		GameObject impactEffectAux = Instantiate(impactEffect, transform.position, transform.rotation);
+		GameObject impactEffectAux = Instantiate(impactEffectPrefab, transform.position, transform.rotation);
         
 		Destroy(gameObject);
         Destroy(impactEffectAux, 1);
