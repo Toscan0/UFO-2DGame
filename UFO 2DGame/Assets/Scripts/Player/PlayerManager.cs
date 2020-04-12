@@ -8,11 +8,11 @@ public class PlayerManager : MonoBehaviour
 
     protected static int totalGold = 0;
 
-    protected static float maxHealth = 100;
-    protected static float currentHealth;
+    protected static int maxHealth = 100;
+    protected static int currentHealth;
 
-    protected static float maxXP = 500;
-    protected static float currentXP = 0;
+    protected static int maxXP = 500;
+    protected static int currentXP = 0;
 
 
     #region GETS&SETS
@@ -29,25 +29,25 @@ public class PlayerManager : MonoBehaviour
         set { totalGold = value; }
     }
 
-    public float MaxHealth
+    public int MaxHealth
     {
         get { return maxHealth; }
         set { maxHealth = value; }
     }
 
-    public float CurrentHealth
+    public int CurrentHealth
     {
         get { return currentHealth; }
         set { currentHealth = value; }
     }
 
-    public float MaxXP
+    public int MaxXP
     {
         get { return maxXP; }
         set { maxXP = value; }
     }
 
-    public float CurrentXP
+    public int CurrentXP
     {
         get { return currentXP; }
         set { currentXP = value; }

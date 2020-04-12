@@ -7,7 +7,7 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerManager))]
 public class PlayerMovement: PlayerManager
 {
-    public Camera camera;
+    public Camera cam;
 
     private Rigidbody2D rb2d;
     private Vector2 movement;
@@ -23,7 +23,7 @@ public class PlayerMovement: PlayerManager
         movement.x = Input.GetAxis("Horizontal");
         movement.y = Input.GetAxis("Vertical");
 
-        mousePos = camera.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }
 
     // Especiallized to physics

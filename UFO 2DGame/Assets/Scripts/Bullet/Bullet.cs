@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Bullet : MonoBehaviour
 {
-    
+    // Prefab
     public GameObject impactEffect;
 
     [SerializeField]
@@ -24,16 +24,18 @@ public class Bullet : MonoBehaviour
 
 	void OnTriggerEnter2D (Collider2D hitInfo)
 	{
-		/*Enemy enemy = hitInfo.GetComponent<Enemy>();
-		if (enemy != null)
+        ITakeDamage damagable = hitInfo.GetComponent<ITakeDamage>();
+		if (damagable != null)
 		{
-			enemy.TakeDamage(damage);
-		}*/
+            //Debug.Log(hitInfo.name);
 
-		GameObject aux = Instantiate(impactEffect, transform.position, transform.rotation);
+            damagable.TakeDamage(damage);
+		}
+
+		GameObject impactEffectAux = Instantiate(impactEffect, transform.position, transform.rotation);
         
 		Destroy(gameObject);
-        Destroy(aux, 1);
+        Destroy(impactEffectAux, 1);
     }
 	
 }
