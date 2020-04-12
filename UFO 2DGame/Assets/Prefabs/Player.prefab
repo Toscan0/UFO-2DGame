@@ -140,6 +140,8 @@ GameObject:
   - component: {fileID: 7695907834322217566}
   - component: {fileID: 4738015032420817753}
   - component: {fileID: 2400486370717920234}
+  - component: {fileID: 3463839184699381649}
+  - component: {fileID: 5781633733214883525}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -253,6 +255,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalGoldText: {fileID: 0}
+--- !u!114 &3463839184699381649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7695907834322217562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7b44b3a05fee8f4fab95726456f5050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
+--- !u!114 &5781633733214883525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7695907834322217562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48a111b038795c244a4788795d9e0cc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  experienceBar: {fileID: 0}
 --- !u!1 &8402253820928013956
 GameObject:
   m_ObjectHideFlags: 0

@@ -286,6 +286,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1937560455 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6165340795645827465, guid: bb0f125838025c74b8daf9bc5a843811,
+    type: 3}
+  m_PrefabInstance: {fileID: 8485206230086897634}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b02fe49885b95449bbbbe92dfc27727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &1971928484 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8789877875465170287, guid: e36ba99b0ee1a4e4087df5a03ad70462,
@@ -668,6 +680,16 @@ PrefabInstance:
       propertyPath: totalGoldText
       value: 
       objectReference: {fileID: 226177072}
+    - target: {fileID: 3463839184699381649, guid: ecf9ef9e32f497d40b244d5a423945e5,
+        type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1637399506}
+    - target: {fileID: 5781633733214883525, guid: ecf9ef9e32f497d40b244d5a423945e5,
+        type: 3}
+      propertyPath: experienceBar
+      value: 
+      objectReference: {fileID: 1937560455}
     - target: {fileID: 7695907834322217560, guid: ecf9ef9e32f497d40b244d5a423945e5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -742,6 +764,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4875512300001034556, guid: bb0f125838025c74b8daf9bc5a843811,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875512300001034556, guid: bb0f125838025c74b8daf9bc5a843811,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5766468458149948399, guid: bb0f125838025c74b8daf9bc5a843811,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -861,6 +893,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UICanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485206230170206157, guid: bb0f125838025c74b8daf9bc5a843811,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -34.19995
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb0f125838025c74b8daf9bc5a843811, type: 3}
