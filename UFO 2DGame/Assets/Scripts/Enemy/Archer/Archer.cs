@@ -5,6 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Archer : Enemy
 {
+    public Transform firePoint;
+    public GameObject arrowPrefab;
+
     [SerializeField]
     private float moveSpeed = 5;
 
@@ -42,7 +45,7 @@ public class Archer : Enemy
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
         //Shoot once every frame because fuck yeah!!
-        Shoot();
+        //Shoot();
     }
 
     private void FixedUpdate()
@@ -53,6 +56,6 @@ public class Archer : Enemy
 
     private void Shoot()
     {
-        //Debug.Log("I shooted!");
+        Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
     }
 }
