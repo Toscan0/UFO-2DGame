@@ -37,19 +37,12 @@ public class Archer : Enemy
             spriteRenderer.flipX = false;
         }
 
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
 
-
-        if (movement != Vector2.zero)
-        {
-            animator.SetFloat("Horizontal", movement.x);
-            animator.SetFloat("Vertical", movement.y);
-            animator.SetFloat("Speed", movement.sqrMagnitude);
-        }
-
-
-
-            //Shoot once every frame because fuck yeah!!
-            Shoot();
+        //Shoot once every frame because fuck yeah!!
+        Shoot();
     }
 
     private void FixedUpdate()
