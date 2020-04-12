@@ -53,7 +53,7 @@ public abstract class Enemy : MonoBehaviour, ITakeDamage
             GameObject deathEffect = Instantiate(deathEffectPrefab, transform.position, transform.rotation);
 
             Destroy(gameObject);
-            Destroy(deathEffect, 1);
+            Destroy(deathEffect, 0.4f);
         }
     }
 
