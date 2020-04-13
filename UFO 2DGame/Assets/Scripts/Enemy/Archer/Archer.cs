@@ -7,8 +7,7 @@ public class Archer : Enemy
 {
     public Transform firePoint;
     public GameObject arrowPrefab;
-
-
+    public Transform target;
 
     private Rigidbody2D rb2d;
     private SpriteRenderer spriteRenderer;
@@ -18,6 +17,7 @@ public class Archer : Enemy
     private float shootTimer;
     [SerializeField]
     private int shootWaitingTime = 3;
+    private bool shooted = false;
 
     //Movement
     [SerializeField]
@@ -26,7 +26,7 @@ public class Archer : Enemy
     [SerializeField]
     private int moveWaitingTime = 5;
     private Vector2 movement;
-    private bool move = true;
+    private bool canMove = true;
 
     private void Start()
     {
@@ -37,10 +37,13 @@ public class Archer : Enemy
 
     private void Update()
     {
+        shooted = false;
         shootTimer += Time.deltaTime;
         if (shootTimer > shootWaitingTime)
         {
             Shoot();
+
+            shooted = true;
             shootTimer = 0;
         }
 
@@ -48,7 +51,7 @@ public class Archer : Enemy
         if (moveTimer > moveWaitingTime)
         {
             Move();
-            move = false;
+            canMove = false;
         }
         if(moveTimer > moveWaitingTime + 1)
         {
@@ -56,7 +59,7 @@ public class Archer : Enemy
             movement.y = 0;
 
             moveTimer = 0;
-            move = true;
+            canMove = true;
         }
 
         //since there are no lefts walk sprites
@@ -69,9 +72,18 @@ public class Archer : Enemy
             spriteRenderer.flipX = false;
         }
 
+        //rotate the player to is target
+        //dont work because my sprite
+        //transform.LookAt(target);
+
+        //make animations
+        //Move it move it
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
+
+        animator.SetBool("Attack", shooted);
+        animator.SetFloat("Rotation", 1);
     }
 
     private void FixedUpdate()
@@ -87,7 +99,7 @@ public class Archer : Enemy
 
     private void Move()
     {
-        if(move == true)
+        if(canMove == true)
         {
             movement.x = Random.Range(-1f, 1f);
             movement.y = Random.Range(-1f, 1f);

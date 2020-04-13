@@ -145,6 +145,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 254812801}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &211273353 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7695907834322217560, guid: ecf9ef9e32f497d40b244d5a423945e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 254812801}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &254812801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -638,6 +644,11 @@ PrefabInstance:
       propertyPath: firePoint
       value: 
       objectReference: {fileID: 1016320284}
+    - target: {fileID: 3167369538851001712, guid: 459988b2f0a2d744e9e47c208ad43658,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 211273353}
     - target: {fileID: 4951980134424094711, guid: 459988b2f0a2d744e9e47c208ad43658,
         type: 3}
       propertyPath: m_FlipY
