@@ -17,3 +17,5 @@ Unity 2019.3.9f1
 	* [Warped Canvas](https://assetstore.unity.com/packages/2d/characters/warped-caves-103250)
 	* [Tiny  RPG - Forest](https://assetstore.unity.com/packages/2d/characters/tiny-rpg-forest-114685)
 	* [Brackeys](https://www.youtube.com/channel/UCYbK_tjZ2OrIZFBvU6CCMiA)
+	* [2D Simple Character : Swordman](https://assetstore.unity.com/packages/2d/characters/2d-simple-character-swordman-133259?aid=1101lPGj&utm_source=aff)
+	* [Knight Sprite Sheet](https://assetstore.unity.com/packages/2d/characters/knight-sprite-sheet-free-93897?aid=1101lPGj&utm_source=aff)
