@@ -21,3 +21,4 @@ Unity 2019.3.9f1
 	* [2D Simple Character : Swordman](https://assetstore.unity.com/packages/2d/characters/2d-simple-character-swordman-133259?aid=1101lPGj&utm_source=aff)
 	* [Knight Sprite Sheet](https://assetstore.unity.com/packages/2d/characters/knight-sprite-sheet-free-93897?aid=1101lPGj&utm_source=aff)
 	* [Shader Tutorial](https://learn.unity.com/tutorial/writing-your-first-shader-in-unity#5c7f8528edbc2a002053b570)
+	* [Custom Post-Processing Effect for LWRP](https://learn.unity.com/tutorial/creating-a-custom-post-processing-effect-for-lwrp?language=en#5e4569dbedbc2a09c4baf37a)
