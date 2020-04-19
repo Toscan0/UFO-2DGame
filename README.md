@@ -9,6 +9,7 @@ Unity 2019.3.9f1
 ### This project includes
 * UFO 2D Top View Game
 * 2D Platformer Misc
+* Unity Shaders
 
 ### Acknowledge:
 
@@ -19,3 +20,4 @@ Unity 2019.3.9f1
 	* [Brackeys](https://www.youtube.com/channel/UCYbK_tjZ2OrIZFBvU6CCMiA)
 	* [2D Simple Character : Swordman](https://assetstore.unity.com/packages/2d/characters/2d-simple-character-swordman-133259?aid=1101lPGj&utm_source=aff)
 	* [Knight Sprite Sheet](https://assetstore.unity.com/packages/2d/characters/knight-sprite-sheet-free-93897?aid=1101lPGj&utm_source=aff)
+	* [Shader Tutorial](https://learn.unity.com/tutorial/writing-your-first-shader-in-unity#5c7f8528edbc2a002053b570)
