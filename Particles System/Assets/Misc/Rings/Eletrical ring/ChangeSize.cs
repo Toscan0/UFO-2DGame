@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class ChangeSize : MonoBehaviour
 {
-    // Start is called before the first frame update
+    ParticleSystem ps;
+    ParticleSystem.SizeOverLifetimeModule psSizeModuel;
+
+    public float sizeMultiplier = 1;
+
     void Start()
     {
-        
+        ps = GetComponent<ParticleSystem>();
+        psSizeModuel = ps.sizeOverLifetime;
     }
 
-    // Update is called once per frame
+    //just a quick reminder how to change the size over life time
     void Update()
     {
-        
+        sizeMultiplier += 0.01f;
+        psSizeModuel.sizeMultiplier = sizeMultiplier;
     }
 }
