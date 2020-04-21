@@ -16,6 +16,9 @@ public class Cube : MonoBehaviour
         //Event
         Main.OnTeleport += ChangePosition;
         Main.OnTeleport += Aux;
+
+        //Action
+        Main.OnTeleportByAction += ChangePosition;
     }
 
     public void ChangePosition(Vector3 newPos)
@@ -38,5 +41,7 @@ public class Cube : MonoBehaviour
     {
         Main.OnTeleport -= ChangePosition;
         Main.OnTeleport -= Aux;
+
+        Main.OnTeleportByAction -= ChangePosition;
     }
 }
