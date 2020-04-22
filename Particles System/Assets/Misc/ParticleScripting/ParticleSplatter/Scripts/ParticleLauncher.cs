@@ -21,14 +21,13 @@ public class ParticleLauncher : MonoBehaviour
     {
         ParticlePhysicsExtensions.GetCollisionEvents(particleLauncher, other, collisionEvents);
 
-        for (int i = 0; i < collisionEvents.Count; i++)
-        {
-            splatDecalPool.ParticleHit(collisionEvents[i], particleColorGradient);
-            EmitAtLocation(collisionEvents[i]);
-        }
-
+         for (int i = 0; i < collisionEvents.Count; i++)
+         {
+             splatDecalPool.ParticleHit(collisionEvents[i], particleColorGradient);
+             EmitAtLocation(collisionEvents[i]);
+         }
     }
-
+     
     void EmitAtLocation(ParticleCollisionEvent particleCollisionEvent)
     {
         splatterParticles.transform.position = particleCollisionEvent.intersection;
@@ -47,6 +46,5 @@ public class ParticleLauncher : MonoBehaviour
             psMain.startColor = particleColorGradient.Evaluate(Random.Range(0f, 1f));
             particleLauncher.Emit(1);
         }
-
     }
 }

@@ -17,7 +17,9 @@ public class ParticleDecalPool : MonoBehaviour
     void Start()
     {
         decalParticleSystem = GetComponent<ParticleSystem>();
+
         particles = new ParticleSystem.Particle[maxDecals];
+
         particleData = new ParticleDecalData[maxDecals];
         for (int i = 0; i < maxDecals; i++)
         {
