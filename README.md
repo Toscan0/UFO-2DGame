@@ -15,6 +15,8 @@ Unity 2019.3.9f1
 	* Basic Shaders
 * Events Tutorial
 	* Basic demo of delegate/Actions/Func and events
+* Events Rotation
+	* Basic demo of basic quarterions rotations
 
 ### Acknowledge:
 
@@ -26,3 +28,5 @@ Unity 2019.3.9f1
 * [Knight Sprite Sheet](https://assetstore.unity.com/packages/2d/characters/knight-sprite-sheet-free-93897?aid=1101lPGj&utm_source=aff)
 * [Shader Tutorial](https://learn.unity.com/tutorial/writing-your-first-shader-in-unity#5c7f8528edbc2a002053b570)
 * [Delegates and Events](https://learn.unity.com/project/c-survival-guide-delegates-and-events?language=en)
+* [Particles Scripting](https://learn.unity.com/tutorial/recorded-video-session-controlling-particles-via-script?language=en)
+* [Particle System](https://learn.unity.com/tutorial/visual-effects-with-particles?language=en)
