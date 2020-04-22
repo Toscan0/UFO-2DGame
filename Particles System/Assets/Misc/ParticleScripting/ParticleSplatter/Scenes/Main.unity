@@ -10006,6 +10006,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 4
     m_NumAlphaKeys: 2
+  dropletDecalPool: {fileID: 429139449}
 --- !u!199 &1117581818
 ParticleSystemRenderer:
   serializedVersion: 6
