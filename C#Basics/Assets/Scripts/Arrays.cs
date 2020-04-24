@@ -27,4 +27,9 @@ public class Arrays : MonoBehaviour
         }
     }
 
+    private Item[] GetItems()
+    {
+        return items;
+    }
+
 }
