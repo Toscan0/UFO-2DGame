@@ -9,7 +9,7 @@ public class ExperienceManager : MonoBehaviour
     private Text XPtext;
 
     private float XP = 0;
-    private float MaxXP = 0;
+    private static float MaxXP = 0;
 
     private void Start()
     {
