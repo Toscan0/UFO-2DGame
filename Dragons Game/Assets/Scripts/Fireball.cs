@@ -6,6 +6,9 @@ using UnityEngine;
 public class Fireball : MonoBehaviour
 {
     [SerializeField]
+    private GameObject impactEffectPrefab;
+
+    [SerializeField]
     private Vector2 startingVelocity;
 
     private Rigidbody2D rb2d;
@@ -15,10 +18,9 @@ public class Fireball : MonoBehaviour
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-
         rb2d.velocity = startingVelocity;
 
-        Destroy(gameObject, 5);
+        Destroy(gameObject, 7);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -31,6 +33,9 @@ public class Fireball : MonoBehaviour
             OnEnemyKilled?.Invoke();
         }
 
+        GameObject impactEffectAux = Instantiate(impactEffectPrefab, transform.position, transform.rotation);
+
         Destroy(gameObject);
+        Destroy(impactEffectAux, 0.3f);
     }
 }
