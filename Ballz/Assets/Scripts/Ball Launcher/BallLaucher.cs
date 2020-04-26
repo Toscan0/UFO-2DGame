@@ -14,6 +14,7 @@ public class BallLaucher : MonoBehaviour
     private List<Ball> balls = new List<Ball>();
 
     private int ballsReady;
+    private bool canThrowBalls = true;
 
     private LaunchPreview launchPreview;
     private BlockSpawner blockSpawner;
@@ -36,19 +37,22 @@ public class BallLaucher : MonoBehaviour
 
     private void Update()
     {
-        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) + Vector3.back * -10;
+        if (canThrowBalls)
+        {
+            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition) + Vector3.back * -10;
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            StartDrag(worldPosition);
-        }
-        else if (Input.GetMouseButton(0))
-        {
-            ContinueDrag(worldPosition);
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            EndDrag();
+            if (Input.GetMouseButtonDown(0))
+            {
+                StartDrag(worldPosition);
+            }
+            else if (Input.GetMouseButton(0))
+            {
+                ContinueDrag(worldPosition);
+            }
+            else if (Input.GetMouseButtonUp(0))
+            {
+                EndDrag();
+            }
         }
     }
 
@@ -74,6 +78,8 @@ public class BallLaucher : MonoBehaviour
 
     private IEnumerator LaunchBalls()
     {
+        canThrowBalls = false;
+
         Vector3 direction = endDragPosition - startDragPosition;
         direction.Normalize();
 
@@ -99,6 +105,8 @@ public class BallLaucher : MonoBehaviour
             blockSpawner.SpawnRowOfBlocks();
 
             CreateBall();
+
+            canThrowBalls = true;
         }
     }
 }
