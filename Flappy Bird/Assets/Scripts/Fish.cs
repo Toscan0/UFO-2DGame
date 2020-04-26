@@ -7,6 +7,9 @@ using UnityEngine;
 public class Fish : MonoBehaviour
 {
     [SerializeField]
+    private GameObject bubbles;
+
+    [SerializeField]
     private float jumpForce = 100;
 
     private Rigidbody2D rb2d;
@@ -22,6 +25,12 @@ public class Fish : MonoBehaviour
         {
             rb2d.velocity = Vector2.zero;
             rb2d.AddForce(Vector2.up * jumpForce);
+
+            bubbles.SetActive(true);
+        }
+        else
+        {
+            bubbles.SetActive(false);
         }
 
         if(transform.position.y > 6 || transform.position.y < -5)
