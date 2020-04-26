@@ -87,6 +87,7 @@ public class BallLaucher : MonoBehaviour
         }
 
         ballsReady = 0;
+        launchPreview.SetEndPoint(transform.position);
     }
 
     public void ReturnBall()

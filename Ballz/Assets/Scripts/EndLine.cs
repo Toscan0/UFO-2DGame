@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndLine : MonoBehaviour
 {
@@ -13,7 +14,14 @@ public class EndLine : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        ballLaucher.ReturnBall();
-        collision.collider.gameObject.SetActive(false);
+        if(collision.gameObject.CompareTag("Ball")){
+            ballLaucher.ReturnBall();
+            collision.collider.gameObject.SetActive(false);
+        }
+        else if (collision.gameObject.CompareTag("Block"))
+        {
+            SceneManager.LoadScene(0);
+        }
+        Debug.Log(collision.gameObject.name);
     }
 }
