@@ -22,6 +22,5 @@ public class EndLine : MonoBehaviour
         {
             SceneManager.LoadScene(0);
         }
-        Debug.Log(collision.gameObject.name);
     }
 }
