@@ -26,16 +26,19 @@ public class Fish : MonoBehaviour
             rb2d.velocity = Vector2.zero;
             rb2d.AddForce(Vector2.up * jumpForce);
 
-            bubbles.SetActive(true);
-        }
-        else
-        {
-            bubbles.SetActive(false);
+            StartCoroutine(EnableBubbles());
         }
 
         if(transform.position.y > 6 || transform.position.y < -5)
         {
             SceneManager.LoadScene(0);
         }
+    }
+
+    private IEnumerator EnableBubbles()
+    {
+        bubbles.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        bubbles.SetActive(false);
     }
 }
