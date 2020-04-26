@@ -21,11 +21,13 @@ public class Enemy : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().enabled = true;
         GetComponent<Collider2D>().enabled = true;
+
+        animator.SetBool("Dead", false);
     }
 
     private IEnumerator MakePlayerDead(float waitTime)
     {
-        animator.SetTrigger("Dead");
+        animator.SetBool("Dead", true);
         GetComponent<Collider2D>().enabled = false;
 
         yield return new WaitForSeconds(waitTime);
