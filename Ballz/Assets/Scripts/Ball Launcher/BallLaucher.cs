@@ -29,7 +29,7 @@ public class BallLaucher : MonoBehaviour
 
     private void CreateBall()
     {
-        var ball = Instantiate(ballPrefab);
+        var ball = Instantiate(ballPrefab, transform.position, Quaternion.identity);
         balls.Add(ball);
         ballsReady++;
     }

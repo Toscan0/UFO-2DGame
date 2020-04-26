@@ -720,7 +720,7 @@ GameObject:
   - component: {fileID: 1457915176}
   - component: {fileID: 1457915178}
   m_Layer: 0
-  m_Name: Ball Return
+  m_Name: End Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

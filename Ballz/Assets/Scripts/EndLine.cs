@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BallReturn : MonoBehaviour
+public class EndLine : MonoBehaviour
 {
     private BallLaucher ballLaucher;
 
