@@ -25,11 +25,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        var horizontal = Input.GetAxis("Horizontal");
+        var horizontal = Input.GetAxis("Mouse X");
         var vertical = Input.GetAxis("Vertical");
-
-        
-        movement = new Vector3(horizontal, 0, vertical);
 
         animator.SetFloat("Speed", vertical);
 
