@@ -6,9 +6,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
-    private float moveSpeed = 100;
+    private float forwardMoveSpeed = 100;
     [SerializeField]
-    private int turnSpeed = 1;
+    private float backwardMoveSpeed = 100;
+    [SerializeField]
+    private float turnSpeed = 5f;
 
     private Vector3 movement;
 
@@ -26,20 +28,22 @@ public class PlayerMovement : MonoBehaviour
         var horizontal = Input.GetAxis("Horizontal");
         var vertical = Input.GetAxis("Vertical");
 
+        
         movement = new Vector3(horizontal, 0, vertical);
 
-        animator.SetFloat("Speed", movement.magnitude);
+        animator.SetFloat("Speed", vertical);
 
-        if(movement.magnitude > 0)
-        {
-            Quaternion newDirection = Quaternion.LookRotation(movement);
-            transform.rotation = Quaternion.Slerp(transform.rotation, newDirection, Time.deltaTime * turnSpeed);
-        }
+        transform.Rotate(Vector3.up, horizontal * turnSpeed * Time.deltaTime);
         
+        if(vertical != 0)
+        {
+            float moveSpeedToUse = (vertical > 0) ? forwardMoveSpeed : backwardMoveSpeed;
+            characterController.SimpleMove(transform.forward * moveSpeedToUse * vertical);
+        }
     }
 
     private void FixedUpdate()
     {
-        characterController.SimpleMove(movement * moveSpeed * Time.fixedDeltaTime);
+        //characterController.SimpleMove(movement * moveSpeed * Time.fixedDeltaTime);
     }
 }
