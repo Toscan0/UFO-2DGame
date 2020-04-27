@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSourceController))]
-public class Gun : MonoBehaviour
+public class PlayerGun : MonoBehaviour
 {
     [SerializeField]
     [Range(100f, 500f)]
@@ -45,7 +45,7 @@ public class Gun : MonoBehaviour
     private void FireGun()
     {
         Ray ray = Camera.main.ViewportPointToRay(Vector3.one * 0.5f);
-        Debug.DrawRay(ray.origin, ray.direction * 100, Color.red, 2f);
+        //Debug.DrawRay(ray.origin, ray.direction * 100, Color.red, 2f);
 
         RaycastHit hitInfo;
         if (Physics.Raycast(ray, out hitInfo, fireRange))
@@ -58,6 +58,7 @@ public class Gun : MonoBehaviour
             }
         }
 
+        // Animation && Sound
         muzleParticle.Play();
         audioSourceController.Play(shotClip);
     }
