@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSourceController))]
 public class Gun : MonoBehaviour
 {
     [SerializeField]
@@ -14,16 +15,19 @@ public class Gun : MonoBehaviour
     [SerializeField]
     [Range(1, 10)]
     private int damage = 1;
-    /*[SerializeField]
-    private Transform firePoint;*/
     [SerializeField]
     private ParticleSystem muzleParticle;
     [SerializeField]
     private AudioClip shotClip;
-    [SerializeField]
-    private AudioSource audioSource;
-
+   
     private float timer;
+
+    private AudioSourceController audioSourceController;
+
+    private void Awake()
+    {
+        audioSourceController = GetComponent<AudioSourceController>();
+    }
 
     private void Update()
     {
@@ -55,7 +59,6 @@ public class Gun : MonoBehaviour
         }
 
         muzleParticle.Play();
-        audioSource.clip = shotClip;
-        audioSource.Play();
+        audioSourceController.Play(shotClip);
     }
 }
