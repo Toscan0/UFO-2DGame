@@ -9,7 +9,8 @@ public class A01_CamSwitch : MonoBehaviour
     private GameObject firstCam;
     [SerializeField]
     private GameObject secondCam;
-
+    [SerializeField]
+    private GameObject ThirdCam;
 
     private void Start()
     {
@@ -21,5 +22,8 @@ public class A01_CamSwitch : MonoBehaviour
         yield return new WaitForSeconds(4);
         secondCam.SetActive(true);
         firstCam.SetActive(false);
+        yield return new WaitForSeconds(5);
+        ThirdCam.SetActive(true);
+        secondCam.SetActive(false);
     }
 }
