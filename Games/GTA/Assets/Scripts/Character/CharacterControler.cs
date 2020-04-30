@@ -34,6 +34,9 @@ public class CharacterControler : MonoBehaviour
 
     void Update()
     {
+
+        
+
         if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
         {
             animation.Play("Run");
@@ -49,8 +52,16 @@ public class CharacterControler : MonoBehaviour
         }
         else
         {
-            animation.Play("Idle");
-            isRunning = false;
+            if (Input.GetButton("Fire1"))
+            {
+                animation.Play("PistolAim");
+            }
+            else
+            {
+                animation.Play("Idle");
+                isRunning = false;
+            }
+            
         }
     }
 

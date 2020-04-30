@@ -6579,13 +6579,28 @@ PrefabInstance:
     - target: {fileID: 3667404453582436724, guid: ebf25874b048045408ea934117d6ba66,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3667404453582436724, guid: ebf25874b048045408ea934117d6ba66,
         type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3667404453582436725, guid: ebf25874b048045408ea934117d6ba66,
+        type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3667404453582436725, guid: ebf25874b048045408ea934117d6ba66,
+        type: 3}
+      propertyPath: m_Animations.Array.data[3]
+      value: 
+      objectReference: {fileID: 7400000, guid: 70e401e4aadb44746ad45f94c8698b08, type: 2}
+    - target: {fileID: 3667404453582436725, guid: ebf25874b048045408ea934117d6ba66,
+        type: 3}
+      propertyPath: m_Animations.Array.data[4]
+      value: 
+      objectReference: {fileID: 7400000, guid: f8cdaa5f46d1bc2488f2cf1ede1aedfb, type: 2}
     - target: {fileID: 3667404453582436726, guid: ebf25874b048045408ea934117d6ba66,
         type: 3}
       propertyPath: footStep1
