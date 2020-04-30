@@ -2,10 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPV : MonoBehaviour
+public class NPCInteraction : MonoBehaviour
 {
-    public AudioSource[] voiceLine;
+    private AudioSource audioSource;
+    public AudioClip[] voiceLine;
     public int lineNumber;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -18,8 +24,11 @@ public class NPV : MonoBehaviour
     IEnumerator NPCVoiceover()
     {
         this.gameObject.GetComponent<BoxCollider>().enabled = false;
+
         lineNumber = Random.Range(0, 3);
-        voiceLine[lineNumber].Play();
+        audioSource.clip = voiceLine[lineNumber];
+        audioSource.Play();
+
         yield return new WaitForSeconds(2);
         this.gameObject.GetComponent<BoxCollider>().enabled = true;
     }
