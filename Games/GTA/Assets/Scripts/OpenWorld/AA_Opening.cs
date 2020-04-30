@@ -27,6 +27,7 @@ public class AA_Opening : MonoBehaviour
         yield return new WaitForSeconds(5);
         fadeOut.SetActive(true);
         fadeIn.SetActive(false);
+        theText.SetActive(false);
         yield return new WaitForSeconds(2.5f);
         fadeOut.SetActive(false);
         killerFake.SetActive(false);
