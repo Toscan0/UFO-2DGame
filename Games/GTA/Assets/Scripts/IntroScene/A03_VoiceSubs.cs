@@ -27,6 +27,8 @@ public class A03_VoiceSubs : MonoBehaviour
     private AudioSource voiceLine05;
     [SerializeField]
     private GameObject fourCam;
+    [SerializeField]
+    private GameObject fadeOut;
 
     private void Start()
     {
@@ -71,6 +73,11 @@ public class A03_VoiceSubs : MonoBehaviour
         subText.text = "Three years ao Jimmy Horseface tries to have me whacked! Set me up";
         yield return new WaitForSeconds(5f);
         subText.text = "Now it's time for me to return that favour.";
+        yield return new WaitForSeconds(3f);
+        subText.text = "";
+        yield return new WaitForSeconds(3f);
+        fadeOut.SetActive(true);
+
     }
 
 }
