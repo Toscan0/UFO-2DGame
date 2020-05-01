@@ -8,15 +8,18 @@ Unity 2019.3.9f1
 
 ### This project includes
 
-* UFO 2D Top View Game
 * 2D Platformer Misc
 	* Different base things of 2D games, like movement, cinemachin 
-* Unity Shaders
-	* Basic Shaders
 * Events Tutorial
 	* Basic demo of delegate/Actions/Func and events
+* Games
+	* Basic games, based on free youtube tutorials
+* Particle System
+	* Basic demo of Particle Systems
 * Events Rotation
 	* Basic demo of basic quarterions rotations
+* Unity Shaders
+	* Basic Shaders
 
 ### Acknowledge:
 
