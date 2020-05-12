@@ -13,6 +13,7 @@ public class Bomb : MonoBehaviour
         if (countdown <= 0f)
         {
             Debug.Log("Explode");
+            FindObjectOfType<ExplosionManager>().Explode(transform.position);
             Destroy(gameObject);
         }
     }
