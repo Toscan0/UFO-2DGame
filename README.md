@@ -1,5 +1,5 @@
 # Unity-Misc
-Miscellaneous of Unity projects
+Miscellaneous of Unity projects / tutorials
 
 ## Description:
 This repository contains several generic projects made in untiy. 
