@@ -33,3 +33,4 @@ Unity 2019.3.9f1
 * [Delegates and Events](https://learn.unity.com/project/c-survival-guide-delegates-and-events?language=en)
 * [Particles Scripting](https://learn.unity.com/tutorial/recorded-video-session-controlling-particles-via-script?language=en)
 * [Particle System](https://learn.unity.com/tutorial/visual-effects-with-particles?language=en)
+* [Cow]("Cow NPC - Now free to download" (https://skfb.ly/6nVN9) by Owlish Media is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).)
